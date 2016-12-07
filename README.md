@@ -27,6 +27,6 @@ This is a little bit more tricky:
 ## Results
 As we can see, when the vector is small, it makes no sense to use a parallel algorithm because the overhead splitting the data and joining the results is too high in comparision with the operations that we're doing.
 Something similar happens with the number of threads. If we have a lot of threads but the load that they have is small, it's not worth because of the overhead that it means to split and join the data from too many chunks.
-However, as the vector size grows, it makes more and more sense to use threads (and more threads) because more operations can then be done in parallel and thus increase our speed execution time.
+However, as the vector size grows, it makes more and more sense to use threads (and more threads) because more operations can then be done in parallel and thus decrease our speed execution time.
 
 ![Comparision chart](https://github.com/mtrebi/pthreads_vector_normalization/blob/master/images/benchmark.png)
